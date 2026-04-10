@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veloura Travel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container navbar">
+      <h1 class="logo">Tony Travel</h1>
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#services">Layanan</a>
+        <a href="#booking">Booking</a>
+        <a href="#packages">Paket</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="hero-tag">Premium Travel Experience</p>
+        <h2>Jelajahi Destinasi Impian Dengan Gaya yang Elegan</h2>
+        <p class="hero-desc">
+          Nikmati perjalanan yang nyaman, modern, dan berkelas bersama layanan
+          travel terpercaya dengan pilihan paket terbaik untuk setiap momen liburan Anda.
+        </p>
+        <a href="#booking" class="hero-btn">Pesan Sekarang</a>
+      </div>
+    </section>
+
+    <section class="features-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-subtitle">Layanan Unggulan</p>
+          <h2>Mengapa Memilih Kami</h2>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="icon-circle">✈</div>
+            <h3>Paket Eksklusif</h3>
+            <p>
+              Pilihan paket wisata modern dengan fasilitas premium, itinerary rapi,
+              dan pengalaman perjalanan yang lebih nyaman.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-circle">★</div>
+            <h3>Pelayanan Profesional</h3>
+            <p>
+              Didukung tim berpengalaman yang siap membantu proses perjalanan Anda
+              dari awal hingga akhir.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="icon-circle">☼</div>
+            <h3>Destinasi Favorit</h3>
+            <p>
+              Jelajahi Bali, Lombok, Raja Ampat, Yogyakarta, dan berbagai destinasi
+              menarik lainnya.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-section" id="booking">
+      <div class="container booking-layout">
+        <article class="booking-info">
+          <p class="section-subtitle">Form Pemesanan</p>
+          <h2>Rencanakan Liburan Anda Hari Ini</h2>
+          <p>
+            Isi data pemesanan dengan lengkap untuk mendapatkan pengalaman wisata
+            yang lebih mudah, cepat, dan nyaman.
+          </p>
+          <ul class="booking-points">
+            <li>Proses booking sederhana</li>
+            <li>Validasi form langsung</li>
+            <li>Tampilan modern dan responsif</li>
+          </ul>
+        </article>
+
+        <form id="formPesan" class="booking-form">
+          <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Masukkan nama lengkap" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email aktif" />
+          </div>
+
+          <div class="form-group">
+            <label for="telepon">Nomor Telepon</label>
+            <input type="number" id="telepon" placeholder="Masukkan nomor telepon" />
+          </div>
+
+          <div class="form-group">
+            <label for="paket">Pilih Paket Wisata</label>
+            <select id="paket">
+              <option value="">-- Pilih Paket --</option>
+              <option value="Bali">Bali</option>
+              <option value="Lombok">Lombok</option>
+              <option value="Raja Ampat">Raja Ampat</option>
+              <option value="Yogyakarta">Yogyakarta</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p class="form-title">Jenis Layanan</p>
+            <div class="option-group">
+              <label class="option-item">
+                <input type="radio" name="layanan" value="Reguler" />
+                <span>Reguler</span>
+              </label>
+              <label class="option-item">
+                <input type="radio" name="layanan" value="VIP" />
+                <span>VIP</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <p class="form-title">Fasilitas Tambahan</p>
+            <div class="option-group">
+              <label class="option-item">
+                <input type="checkbox" name="fasilitas" value="Hotel" />
+                <span>Hotel</span>
+              </label>
+              <label class="option-item">
+                <input type="checkbox" name="fasilitas" value="Makan" />
+                <span>Makan</span>
+              </label>
+              <label class="option-item">
+                <input type="checkbox" name="fasilitas" value="Transport" />
+                <span>Transport</span>
+              </label>
+            </div>
+          </div>
+
+          <button type="submit" class="primary-btn">Kirim Pemesanan</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="package-section" id="packages">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-subtitle">Daftar Paket Wisata</p>
+          <h2>Pilih Perjalanan Favorit Anda</h2>
+        </div>
+
+        <section class="add-package-box">
+          <h3>Tambah Paket Baru</h3>
+          <div class="add-package-form">
+            <input type="text" id="namaPaket" placeholder="Nama Paket" />
+            <input type="number" id="hargaPaket" placeholder="Harga Paket" />
+            <button onclick="tambah()" class="primary-btn">Tambah Paket</button>
+          </div>
+        </section>
+
+        <section id="data" class="package-grid"></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2026 Veloura Travel. Crafted with style for your dream journey.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
